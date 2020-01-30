@@ -1,15 +1,15 @@
 <template>
-	<div id="main" >
-		<!-- Main: начало -->
-		qqq
-		<!-- Main: конец -->
+	<div id="edit" >
+		<!-- Edit: начало -->
+		
+		<!-- Edit: конец -->
 	</div>
 </template>
 
 <script>
 
 	//
-	//	Главный экран
+	//	Редактирование сайта
 	//	
 	
 	export default {
