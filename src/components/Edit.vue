@@ -28,13 +28,15 @@
 							:max="5"
 							show-stops>
 						</el-slider>
+
+						<el-button type="r" @click="removeBrick(index)">Удалить</el-button>
 					</div>
 				</div>
 			</template>
 		</div>
 
 		<div class="float-menu">
-			<el-button  icon="el-icon-plus" type="primary" round @click="addBlock">Добавить блок</el-button>
+			<el-button  icon="el-icon-plus" type="primary" round @click="addBrick">Добавить блок</el-button>
  			<el-button v-if="bricks.length>0"  type="success" icon="el-icon-check" round @click="$router.push('/view/')">Посмотреть</el-button>
 		</div>
 
@@ -140,13 +142,21 @@
 			/*
 			*	Добавляем на сайт новый блок
 			*/
-			addBlock(){
+			addBrick(){
 				this.bricks.push({
 					type: "1",
 					title: "title",
 					subtitle: "subtitle",
 					degree: 3,
 				})
+			},
+
+			/*
+			*	Удаляем блок
+			*/
+			removeBrick(index){
+				console.log(index)
+				this.bricks.splice(index-1,1)
 			}
 		}
 	
