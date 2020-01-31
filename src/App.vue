@@ -1,22 +1,8 @@
 <template>
 	<div id="app" >
-		<div class="header">
-			<div class="wrapper">
-				<router-link class="logo" to="/">Vue test app</router-link>
-			</div>
-		</div>
-		<div class="content">
-			<div class="wrapper">
-				<transition name="fade" mode="out-in">
-					<router-view></router-view>
-				</transition>
-			</div>
-		</div>	
-		<div class="footer">
-			<div class="wrapper">
-				&copy; 2019 VAHLIN
-			</div>
-		</div>			
+		<transition name="fade" mode="out-in">
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 
@@ -104,8 +90,12 @@
 
 <style>
 
+	html, body {
+		height: 100%
+	}
+
 	* {
-		font-family: 'Roboto'
+		font-family: 'Fira Sans'
 	}
 
 	html,body,#app {
@@ -131,34 +121,137 @@
 		width: 1180px;
 	}
 
-	.header {
-		flex: 0 0 auto;
-		height: 50px;
-		border-bottom: solid 1px #ddd
+	
+
+	/* Стили для управления навигацией */
+
+	.float-menu {
+		position: fixed;
+		bottom: 64px;
+		right: 64px
+	}
+	
+	/* Стили сайта */
+
+	.top {
+		line-height: 120px;
+		text-align: center;
+		color: #fff;
+		background: #552F7F;
+		font-size: 62px;
+
 	}
 
-		.header a {
-			line-height: 50px;
+	/* Блоки из которых состоит сайт */
+
+	.brick {
+		
+		padding: 60px;
+		text-align: center;
+		position: relative;
+	}
+
+		.brick-inside {
+			width: 500px;
+			padding: 40px;
+			display: inline-block;
+			border-radius: 12pxж
 		}
 
-		.header .logo {
-			color: #000;
-			text-decoration: none;
-			font-weight: 700;
-			font-size: 18px
+			.brick-inside.degree-1 {
+				transform: rotate(-8deg);
+			}
+
+			.brick-inside.degree-2 {
+				transform: rotate(-4deg);
+			}
+
+			.brick-inside.degree-3 {
+				transform: rotate(0deg);
+			}
+
+			.brick-inside.degree-4 {
+				transform: rotate(4deg);
+			}
+
+			.brick-inside.degree-5 {
+				transform: rotate(8deg);
+			}
+		
+		/*	Блок тип 1 */
+
+		.brick.type-1 {
+			background: #00B0FF;
+			
 		}
 
-	.content {
-		flex: 1 0 auto;
-		padding: 20px 0
-	}
+			.brick.type-1 .brick-inside {
+				
+				background: #00B0FF;
+				border: solid 10px #059DE1;
+				box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+			}
 
-	.footer {
-		flex: 0 0 auto;
-		background: #303133;
-		height: 100px;
-		line-height: 100px;
-		color: #fff
-	}
+			.brick.type-1 .title{
+				color: #fff;
+				font-size: 24px;
+				font-weight: 700
+			}
+
+			.brick.type-1 .subtitle {
+				color: #007CB5;
+				font-size: 36px;
+				font-weight: 700
+			}
+
+		/*	Блок тип 2 */
+
+		.brick.type-2 {
+			background: #7DCE94;
+			
+		}
+
+			.brick.type-2 .brick-inside {
+				background: #7DCE94;
+				border: solid 10px #65B1A8;
+				box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+			}
+
+			.brick.type-2 .title {
+				color: #fff;
+				font-size: 22px;
+				font-weight: 700
+			}
+
+			.brick.type-2 .subtitle {
+				color: #A37E77;
+				font-size: 30px;
+				font-weight: 700
+			}
+
+		/*	Блок тип 3 */
+
+		.brick.type-3 {
+			background: #C94336;
+			
+		}
+
+			.brick.type-3 .brick-inside {
+				background: #C94336;
+				border: solid 10px #EC4546;
+				box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+			}
+
+			.brick.type-3 .title {
+				color: #fff;
+				font-size: 24px;
+				font-weight: 700
+			}
+
+			.brick.type-3 .subtitle {
+				color: #3C2848;
+				font-size: 36px;
+				font-weight: 700
+			}	
 
 </style>

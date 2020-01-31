@@ -5,8 +5,8 @@ export default {
 	//
 	
 	state: {
-		users: [],
-		events: []
+		name: 'Название сайта',
+		bricks: []
 	},
 	
 	//
@@ -15,17 +15,13 @@ export default {
 	
 	getters: {
 		
-		users: state => {
-			return state.users
+		name: state => {
+			return state.name
 		},
 
-		events: state => {
-			return state.events
+		bricks: state => {
+			return state.bricks
         },
-        
-        userById: state => userId => {
-            return state.users.find(user => user.id === userId);
-        }
 
 	},
 
@@ -36,22 +32,23 @@ export default {
 	mutations: {
 		
 		//
-		//	Обновить всех пользователей
+		//	Сохранить название сайта
 		//
 		
-		SET_USERS : (state, users) => {
-			if(users!==null) {
-				state.users = users
+		SET_NAME : (state, name) => {
+			if(name!==null) {
+				state.name = name
 			}
 		},
 
 		//
-		//	Обновить все встречи
+		//	Сохранить блоки
 		//
 		
-		SET_EVENTS : (state, events) => {
-			if(events!==null) {
-				state.events = events
+		SET_BRICKS : (state, bricks) => {
+			if(bricks!==null) {
+				state.bricks = bricks
+				console.log("Bricks saved to store")
 			}
 		},
 
