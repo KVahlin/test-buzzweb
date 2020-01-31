@@ -2,7 +2,7 @@
 	<div id="edit" >
 		<!-- Edit: начало -->
 		 <div class="top">
-			<input class="input-flat" v-model="name" type="text" />
+			<input class="input-flat" maxlength="15" v-model="name" type="text" />
 		</div>
 		<div class="bricks">
 			<!-- Редактируемые блоки: начало -->
@@ -10,10 +10,10 @@
 				<div v-for="(brick,index) in bricks" :key="++index" :class="['brick','type-'+brick.type]">
 					<div :class="['brick-inside', 'degree-'+brick.degree]">
 						<div class="title">
-							<input class="input-flat title" v-model="brick.title" type="text" />
+							<input maxlength="15" class="input-flat title" v-model="brick.title" type="text" />
 						</div>
 						<div class="subtitle">
-							<input class="input-flat subtitle" v-model="brick.subtitle" type="text" />
+							<input maxlength="15" class="input-flat subtitle" v-model="brick.subtitle" type="text" />
 						</div>
 					</div>
 					<!-- Управление блоком: начало -->
