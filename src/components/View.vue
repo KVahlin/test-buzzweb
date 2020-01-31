@@ -4,19 +4,15 @@
         <div class="top">
 			{{this.$store.getters.name}}
 		</div>
-
 		<div v-for="(brick,index) in bricks" :key="++index" :class="['brick','type-'+brick.type]">
 			<div :class="['brick-inside', 'degree-'+brick.degree]">
 				<div class="title">{{brick.title}}</div>
 				<div class="subtitle">{{brick.subtitle}}</div>
 			</div>
 		</div>
-
 		<div class="float-menu">
-			
  			<el-button  type="success" icon="el-icon-back" round @click="$router.push('/edit/')">Назад к редактированию</el-button>
 		</div>
-
 		<!-- View: конец -->
 	</div>
 </template>
@@ -24,7 +20,7 @@
 <script>
 
 	//
-	//	Редактирование сайта
+	//	Просмотр сайта
 	//	
 	
 	export default {
@@ -40,7 +36,7 @@
 		},
 		
 		//
-		//	Данные
+		//	--data
 		//
 		
 		data: function(){

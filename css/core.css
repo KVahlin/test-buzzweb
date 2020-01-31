@@ -1,0 +1,47 @@
+/* Простой сброс и базовые стили */
+
+* {
+    font-family: 'Fira Sans'
+}
+
+html,body,#app {
+    height: 100%
+}
+
+body {
+    overflow-y: scroll
+}
+
+#app {
+    display: flex;
+    flex-direction: column
+}
+
+a {
+    color: #409EFF;
+    font-size: 14px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1180px;
+}
+
+/* Стили для управления навигацией */
+
+.float-menu {
+    position: fixed;
+    bottom: 64px;
+    right: 64px
+}
+
+/* Стили сайта */
+
+.top {
+    line-height: 120px;
+    text-align: center;
+    color: #fff;
+    background: #552F7F;
+    font-size: 62px;
+
+}

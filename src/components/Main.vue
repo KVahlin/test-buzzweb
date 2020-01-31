@@ -17,7 +17,7 @@
 	export default {
 		
 		//
-		//	Компоненты
+		//	--components
 		//
 		
 		components:{
@@ -25,7 +25,7 @@
 		},
 		
 		//
-		//	Данные
+		//	--data
 		//
 		
 		data: function(){

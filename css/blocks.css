@@ -1,0 +1,110 @@
+/* Блоки из которых состоит редактируемый лендинг */
+
+.brick {	
+    padding: 60px;
+    text-align: center;
+    position: relative;
+}
+
+    .brick-inside {
+        width: 500px;
+        padding: 40px;
+        display: inline-block;
+        border-radius: 12pxж
+    }
+
+        .brick-inside.degree-1 {
+            transform: rotate(-8deg);
+        }
+
+        .brick-inside.degree-2 {
+            transform: rotate(-4deg);
+        }
+
+        .brick-inside.degree-3 {
+            transform: rotate(0deg);
+        }
+
+        .brick-inside.degree-4 {
+            transform: rotate(4deg);
+        }
+
+        .brick-inside.degree-5 {
+            transform: rotate(8deg);
+        }
+    
+    /*	Блок тип 1 */
+
+    .brick.type-1 {
+        background: #00B0FF;
+        
+    }
+
+        .brick.type-1 .brick-inside {
+            
+            background: #00B0FF;
+            border: solid 10px #059DE1;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        .brick.type-1 .title{
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700
+        }
+
+        .brick.type-1 .subtitle {
+            color: #007CB5;
+            font-size: 36px;
+            font-weight: 700
+        }
+
+    /*	Блок тип 2 */
+
+    .brick.type-2 {
+        background: #7DCE94;
+        
+    }
+
+        .brick.type-2 .brick-inside {
+            background: #7DCE94;
+            border: solid 10px #65B1A8;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        .brick.type-2 .title {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700
+        }
+
+        .brick.type-2 .subtitle {
+            color: #A37E77;
+            font-size: 36px;
+            font-weight: 700
+        }
+
+    /*	Блок тип 3 */
+
+    .brick.type-3 {
+        background: #C94336;
+        
+    }
+
+        .brick.type-3 .brick-inside {
+            background: #C94336;
+            border: solid 10px #EC4546;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        .brick.type-3 .title {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700
+        }
+
+        .brick.type-3 .subtitle {
+            color: #3C2848;
+            font-size: 36px;
+            font-weight: 700
+        }

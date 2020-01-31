@@ -4,8 +4,8 @@
 		 <div class="top">
 			<input class="input-flat" v-model="name" type="text" />
 		</div>
-
 		<div class="bricks">
+			<!-- Редактируемые блоки: начало -->
 			<template>
 				<div v-for="(brick,index) in bricks" :key="++index" :class="['brick','type-'+brick.type]">
 					<div :class="['brick-inside', 'degree-'+brick.degree]">
@@ -16,6 +16,7 @@
 							<input class="input-flat subtitle" v-model="brick.subtitle" type="text" />
 						</div>
 					</div>
+					<!-- Управление блоком: начало -->
 					<div class="control">
 						<el-radio-group v-model="brick.type">
 							<el-radio-button v-for="type in types" :label="type.value" :key="type.value">{{type.value}}</el-radio-button>
@@ -28,18 +29,17 @@
 							:max="5"
 							show-stops>
 						</el-slider>
-
 						<el-button type="r" @click="removeBrick(index)">Удалить</el-button>
 					</div>
+					<!-- Управление блоком: конец -->
 				</div>
 			</template>
+			<!-- Редактируемые блоки: конец -->
 		</div>
-
 		<div class="float-menu">
 			<el-button  icon="el-icon-plus" type="primary" round @click="addBrick">Добавить блок</el-button>
  			<el-button v-if="bricks.length>0"  type="success" icon="el-icon-check" round @click="$router.push('/view/')">Посмотреть</el-button>
 		</div>
-
 		<!-- Edit: конец -->
 	</div>
 </template>
@@ -47,13 +47,15 @@
 <script>
 
 	//
-	//	Редактирование сайта
+	//	Редактирование сайта:
+	//	- изменение заголовка
+	//	- создание, редактирование и удаление блоков
 	//	
 	
 	export default {
 
 		//
-		//	Компоненты
+		//	--components
 		//
 		
 		components:{
@@ -61,7 +63,7 @@
 		},
 		
 		//
-		//	Данные
+		//	--data
 		//
 		
 		data: function(){
@@ -70,16 +72,16 @@
 				bricks: [],
 				types: [
 					{
-						label: 'Тип 1',
-						value: "1"
+						label: 'Синий',
+						value: '1'
 					},
 					{
-						label: 'Тип 2',
-						value: "2"
+						label: 'Зелёный',
+						value: '2'
 					},
 					{
-						label: 'Тип 3',
-						value: "3"
+						label: 'Красный',
+						value: '3'
 					}
 				]
         	}
@@ -145,8 +147,8 @@
 			addBrick(){
 				this.bricks.push({
 					type: "1",
-					title: "title",
-					subtitle: "subtitle",
+					title: "Заголовок",
+					subtitle: "Подзаголовок",
 					degree: 3,
 				})
 			},
@@ -155,7 +157,6 @@
 			*	Удаляем блок
 			*/
 			removeBrick(index){
-				console.log(index)
 				this.bricks.splice(index-1,1)
 			}
 		}
@@ -173,7 +174,6 @@
 		padding: 0px;
 	}
 
-
 	.control {
 		position: absolute;
 		top: 32px;
@@ -182,11 +182,5 @@
 		padding: 32px;
 		background: #fff
 	}
-
-	.el-slider {
-		
-	}
-
-	
 
 </style>
